@@ -9,28 +9,43 @@
         workspace1: workspace1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_1>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_1>,
+                <&macro_release>;
+
             label = "WORKSPACE1";
         };
 
         workspace2: workspace2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_2>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_2>,
+                <&macro_release>;
+
             label = "WORKSPACE2";
         };
 
         workspace3: workspace3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_3>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_3>;
+
             label = "WORKSPACE3";
         };
 
         workspace4: workspace4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_4>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_COMMAND &kp LEFT_ALT &kp NUMBER_4>,
+                <&macro_release>;
+
             label = "WORKSPACE4";
         };
     };
@@ -40,11 +55,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                   &mo 3      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &kp LANG1                                                                                &kp LANG3  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp LANG2            &kp LCTRL  &kp LEFT_COMMAND    &kp LGUI       &kp RCTRL             &kp LANG4  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                   &kp LEFT_ALT        &kp RIGHT_ALT                                   &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                     &kp BSPC  &kp DEL    &kp HOME            &kp END        &kp ENTER  &kp SPACE                     &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                     &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &workspace1                                                                                &workspace3  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &workspace2            &kp LCTRL  &kp LEFT_COMMAND    &kp LGUI       &kp RCTRL             &workspace4  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                     &kp LEFT_ALT        &kp RIGHT_ALT                                     &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                       &kp BSPC  &kp DEL    &kp HOME            &kp END        &kp ENTER  &kp SPACE                       &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
